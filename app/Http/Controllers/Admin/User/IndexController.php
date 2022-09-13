@@ -19,19 +19,9 @@ class IndexController extends Controller
 
         $filter = app()->make(UserFilter::class, ['queryParams' => array_filter($data)]);
 
-       // $users_searches = User::filter($filter)->get();
-      //  $users_searches = User::filter($filter)->get();
-        $users_searches = User::filter($filter)->paginate(50);
-
-
-   //    dd($users_search);
-
-
-    //    $users = User::paginate(5);
-
- //  $deleted_users = User::onlyTrashed()->get();
+        $users_searches = User::filter($filter)->paginate(100);
 
         return view('admin.user.index', compact('users', 'users_searches',
-        'data' /*'deleted_users'*/));
+        'data' ));
     }
 }

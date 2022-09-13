@@ -20,7 +20,8 @@ class IndexController extends Controller
         $filter = app()->make(UserFilter::class, ['queryParams' => array_filter($data)]);
 
        // $users_searches = User::filter($filter)->get();
-        $users_searches = User::filter($filter)->get();
+      //  $users_searches = User::filter($filter)->get();
+        $users_searches = User::filter($filter)->paginate(50);
 
 
    //    dd($users_search);

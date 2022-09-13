@@ -25,7 +25,7 @@ class UserFactory extends Factory
             .uheWG/igi', // password
             'data_of_birth' => $this->faker->dateTimeBetween('1970-01-01', '2003-12-31')
                 ->format('Y/m/d'),
-            'gender' => $this->faker->randomElements(['male', 'female'])[0],
+            'gender' => $this->faker->randomElements(['man', 'female'])[0],
             'knowledge_of_languages' => $this->faker->randomElements(['eng, kaz', 'eng, rus', 'spanish, kaz'])[0],
             'phone' => $this->faker->phoneNumber(),
             'work_experience' => $this->faker->sentence(5),

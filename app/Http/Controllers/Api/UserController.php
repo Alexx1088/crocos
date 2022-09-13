@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UserStoreRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
+use http\Env\Response;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -64,8 +65,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+
+        $user->delete();
+
+        return response(null, \http\Client\Response::HTTP_NO_CONTENT);
     }
 }

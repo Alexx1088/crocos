@@ -25,11 +25,11 @@ class User extends Authenticatable
         'patronymic',
         'data_of_birth',
         'gender',
-        'knowledge of languages',
+        'knowledge_of_languages',
         'phone',
-        'work experience',
-        'key skills',
-        'about me',
+        'work_experience',
+        'key_skills',
+        'about_me',
     ];
 
     /**
